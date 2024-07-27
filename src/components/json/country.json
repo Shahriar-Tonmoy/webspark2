@@ -1,0 +1,310 @@
+[
+
+    {
+        "language": "English",
+        "countryCodes": ["en-US"],
+        "flag": "🇺🇸"
+    },
+    {
+        "language": "বাংলা",
+        "countryCodes": ["bn-BD"],
+        "flag": "🇧🇩"
+    },
+    {
+        "language": "العربية",
+        "countryCodes": ["ar-SA"],
+        "flag": "🇸🇦"
+    },
+    {
+        "language": "한국어",
+        "countryCodes": ["ko-KR"],
+        "flag": "🇰🇷"
+      },
+      {
+        "language": "中文",
+        "countryCodes": ["cmn-Hans-CN"],
+        "flag": "🇨🇳"
+      },
+      {
+        "language": "日本語",
+        "countryCodes": ["ja-JP"],
+        "flag": "🇯🇵"
+      },
+      {
+        "language": "हिन्दी",
+        "countryCodes": ["hi-IN"],
+        "flag": "🇮🇳"
+      },
+      {
+        "language": "اُردُو",
+        "countryCodes": ["ur-PK", "ur-IN"],
+        "flag": "🇵🇰"
+      },
+    {
+      "language": "Afrikaans",
+      "countryCodes": ["af-ZA"],
+      "flag": "🇿🇦"
+    },
+    {
+      "language": "አማርኛ",
+      "countryCodes": ["am-ET"],
+      "flag": "🇪🇹"
+    },
+    {
+      "language": "Azərbaycanca",
+      "countryCodes": ["az-AZ"],
+      "flag": "🇦🇿"
+    },
+    {
+      "language": "Bahasa Indonesia",
+      "countryCodes": ["id-ID"],
+      "flag": "🇮🇩"
+    },
+    {
+      "language": "Bahasa Melayu",
+      "countryCodes": ["ms-MY"],
+      "flag": "🇲🇾"
+    },
+    {
+      "language": "Català",
+      "countryCodes": ["ca-ES"],
+      "flag": "🇪🇸"
+    },
+    {
+      "language": "Čeština",
+      "countryCodes": ["cs-CZ"],
+      "flag": "🇨🇿"
+    },
+    {
+      "language": "Dansk",
+      "countryCodes": ["da-DK"],
+      "flag": "🇩🇰"
+    },
+    {
+      "language": "Deutsch",
+      "countryCodes": ["de-DE"],
+      "flag": "🇩🇪"
+    },
+    {
+      "language": "Español",
+      "countryCodes": ["es-VE"],
+      "flag": "🇪🇸"
+    },
+    {
+      "language": "Euskara",
+      "countryCodes": ["eu-ES"],
+      "flag": "🇪🇸"
+    },
+    {
+      "language": "Filipino",
+      "countryCodes": ["fil-PH"],
+      "flag": "🇵🇭"
+    },
+    {
+      "language": "Français",
+      "countryCodes": ["fr-FR"],
+      "flag": "🇫🇷"
+    },
+    {
+      "language": "Basa Jawa",
+      "countryCodes": ["jv-ID"],
+      "flag": "🇮🇩"
+    },
+    {
+      "language": "Galego",
+      "countryCodes": ["gl-ES"],
+      "flag": "🇪🇸"
+    },
+    {
+      "language": "ગુજરાતી",
+      "countryCodes": ["gu-IN"],
+      "flag": "🇮🇳"
+    },
+    {
+      "language": "Hrvatski",
+      "countryCodes": ["hr-HR"],
+      "flag": "🇭🇷"
+    },
+    {
+      "language": "IsiZulu",
+      "countryCodes": ["zu-ZA"],
+      "flag": "🇿🇦"
+    },
+    {
+      "language": "Íslenska",
+      "countryCodes": ["is-IS"],
+      "flag": "🇮🇸"
+    },
+    {
+      "language": "Italiano",
+      "countryCodes": ["it-IT", "it-CH"],
+      "flag": "🇮🇹"
+    },
+    {
+      "language": "ಕನ್ನಡ",
+      "countryCodes": ["kn-IN"],
+      "flag": "🇮🇳"
+    },
+    {
+      "language": "ភាសាខ្មែរ",
+      "countryCodes": ["km-KH"],
+      "flag": "🇰🇭"
+    },
+    {
+      "language": "Latviešu",
+      "countryCodes": ["lv-LV"],
+      "flag": "🇱🇻"
+    },
+    {
+      "language": "Lietuvių",
+      "countryCodes": ["lt-LT"],
+      "flag": "🇱🇹"
+    },
+    {
+      "language": "മലയാളം",
+      "countryCodes": ["ml-IN"],
+      "flag": "🇮🇳"
+    },
+    {
+      "language": "मराठी",
+      "countryCodes": ["mr-IN"],
+      "flag": "🇮🇳"
+    },
+    {
+      "language": "Magyar",
+      "countryCodes": ["hu-HU"],
+      "flag": "🇭🇺"
+    },
+    {
+      "language": "ລາວ",
+      "countryCodes": ["lo-LA"],
+      "flag": "🇱🇦"
+    },
+    {
+      "language": "Nederlands",
+      "countryCodes": ["nl-NL"],
+      "flag": "🇳🇱"
+    },
+    {
+      "language": "नेपाली भाषा",
+      "countryCodes": ["ne-NP"],
+      "flag": "🇳🇵"
+    },
+    {
+      "language": "Norsk bokmål",
+      "countryCodes": ["nb-NO"],
+      "flag": "🇳🇴"
+    },
+    {
+      "language": "Polski",
+      "countryCodes": ["pl-PL"],
+      "flag": "🇵🇱"
+    },
+    {
+      "language": "Português",
+      "countryCodes": ["pt-PT"],
+      "flag": "🇵🇹"
+    },
+    {
+      "language": "Română",
+      "countryCodes": ["ro-RO"],
+      "flag": "🇷🇴"
+    },
+    {
+      "language": "සිංහල",
+      "countryCodes": ["si-LK"],
+      "flag": "🇱🇰"
+    },
+    {
+      "language": "Slovenščina",
+      "countryCodes": ["sl-SI"],
+      "flag": "🇸🇮"
+    },
+    {
+      "language": "Basa Sunda",
+      "countryCodes": ["su-ID"],
+      "flag": "🇮🇩"
+    },
+    {
+      "language": "Slovenčina",
+      "countryCodes": ["sk-SK"],
+      "flag": "🇸🇰"
+    },
+    {
+      "language": "Suomi",
+      "countryCodes": ["fi-FI"],
+      "flag": "🇫🇮"
+    },
+    {
+      "language": "Svenska",
+      "countryCodes": ["sv-SE"],
+      "flag": "🇸🇪"
+    },
+    {
+      "language": "Kiswahili",
+      "countryCodes": ["sw-KE"],
+      "flag": "🇹🇿"
+    },
+    {
+      "language": "ქართული",
+      "countryCodes": ["ka-GE"],
+      "flag": "🇬🇪"
+    },
+    {
+      "language": "Հայերեն",
+      "countryCodes": ["hy-AM"],
+      "flag": "🇦🇲"
+    },
+    {
+      "language": "தமிழ்",
+      "countryCodes": ["ta-IN"],
+      "flag": "🇮🇳"
+    },
+    {
+      "language": "తెలుగు",
+      "countryCodes": ["te-IN"],
+      "flag": "🇮🇳"
+    },
+    {
+      "language": "Tiếng Việt",
+      "countryCodes": ["vi-VN"],
+      "flag": "🇻🇳"
+    },
+    {
+      "language": "Türkçe",
+      "countryCodes": ["tr-TR"],
+      "flag": "🇹🇷"
+    },
+    {
+      "language": "Ελληνικά",
+      "countryCodes": ["el-GR"],
+      "flag": "🇬🇷"
+    },
+    {
+      "language": "български",
+      "countryCodes": ["bg-BG"],
+      "flag": "🇧🇬"
+    },
+    {
+      "language": "Pусский",
+      "countryCodes": ["ru-RU"],
+      "flag": "🇷🇺"
+    },
+    {
+      "language": "Српски",
+      "countryCodes": ["sr-RS"],
+      "flag": "🇷🇸"
+    },
+    {
+      "language": "Українська",
+      "countryCodes": ["uk-UA"],
+      "flag": "🇺🇦"
+    },
+    {
+      "language": "ภาษาไทย",
+      "countryCodes": ["th-TH"],
+      "flag": "🇹🇭"
+    }
+    
+  ]
+  

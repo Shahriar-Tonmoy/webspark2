@@ -1,0 +1,7 @@
+.mainBody {
+    background-color: black;
+    flex: 1;
+}
+.loginCard {
+    position: absolute;
+}

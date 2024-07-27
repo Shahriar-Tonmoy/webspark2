@@ -1,0 +1,8 @@
+.text-shadow {
+    /* background-image: linear-gradient(to bottom, #fd5c63, #ff9844);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; */
+    text-shadow: rgba(255, 255, 255, 0.5) 5px 5px 5px;
+  }
+  

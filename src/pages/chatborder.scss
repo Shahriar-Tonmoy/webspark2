@@ -1,0 +1,83 @@
+$colors: (
+  hsl(224, 85%, 66%),
+  hsl(269, 85%, 66%),
+  hsl(314, 85%, 66%),
+  hsl(359, 85%, 66%),
+  hsl(44, 85%, 66%),
+  hsl(89, 85%, 66%),
+  hsl(134, 85%, 66%),
+  hsl(179, 85%, 66%)
+);
+
+$shadow-colors: (
+  rgba(224, 224, 224, 0.3),
+  rgba(255, 255, 0, 0.3),
+  rgba(0, 255, 0, 0.3),
+  rgba(0, 255, 255, 0.3),
+  rgba(255, 0, 255, 0.3)
+);
+
+$shadow-inset-colors: (
+  rgba(224, 224, 224, 0.3) inset,
+  rgba(255, 255, 0, 0.3) inset,
+  rgba(0, 255, 0, 0.3) inset,
+  rgba(0, 255, 255, 0.3) inset,
+  rgba(255, 0, 255, 0.3) inset
+);
+
+$gradient: linear-gradient(60deg, $colors...);
+
+.gradient-border {
+  --border-width: 3px;
+  position: relative;
+  display: flex;
+  border-radius: var(--border-width);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Base shadow */
+  
+  &::after {
+    position: absolute;
+    content: "";
+    top: calc(-1 * var(--border-width));
+    left: calc(-1 * var(--border-width));
+    z-index: -1;
+    width: calc(100% + var(--border-width) * 2);
+    height: calc(100% + var(--border-width) * 2);
+    background: $gradient;
+    background-size: 300% 300%;
+    background-position: 0 50%;
+    border-radius: calc(2 * var(--border-width));
+    animation: moveGradient 4s alternate infinite;
+    box-shadow: 0 0 20px $shadow-colors,
+                0 0 20px $shadow-inset-colors; /* Gradient shadow */
+    animation: moveGradientShadow 4s alternate infinite;
+  }
+}
+
+@keyframes moveGradient {
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes moveGradientShadow {
+  0% {
+    box-shadow: 0 0 20px rgba(224, 224, 224, 0.3),
+               0 0 20px rgba(224, 224, 224, 0.3) inset;
+  }
+  25% {
+    box-shadow: 0 0 20px rgba(224, 224, 224, 0.3),
+               0 0 20px rgba(224, 224, 224, 0.3) inset;
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 0, 0.3),
+               0 0 20px rgba(255, 255, 0, 0.3) inset;
+  }
+  75% {
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3),
+               0 0 20px rgba(0, 255, 0, 0.3) inset;
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3),
+               0 0 20px rgba(0, 255, 255, 0.3) inset;
+  }
+}

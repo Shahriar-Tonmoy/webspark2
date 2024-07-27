@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  class="light-style customizer-hide"
+  dir="ltr"
+  data-theme="theme-default"
+  data-assets-path="assets/"
+  data-template="vertical-menu-template-free"
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+
+    <title>Register Basic - Pages | Sneat - Bootstrap 5 HTML Admin Template - Pro</title>
+
+    <meta name="description" content="" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon/favicon.ico" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .intl-tel-input {
+        font-size: 45px;
+      }
+      .iti{
+        width: 100%;
+      }
+      .country-list {
+        width: 900px;
+      }
+      input {
+        height: auto;
+        width: 700px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      input::placeholder {
+        color: #ccc;
+      }
+      #valid_phone{
+        position: absolute;
+        right: 0;
+        height: 100%;
+        border-left: 0;
+      }
+      #valid_email{
+        position: absolute;
+        right: 0;
+        height: 100%;
+        border-left: 0;
+      }
+      .progress {
+        height: 5px !important;
+    }
+      .progress-bar-danger {
+        background-color: #e90f10 !important;
+      }
+      .progress-bar-warning{
+        background-color: #ffad00 !important;
+      }
+      .progress-bar-success{
+        background-color: #02b502 !important;
+      }
+    </style>
+
+    <!-- Icons. Uncomment required icon fonts -->
+    <link rel="stylesheet" href="assets/vendor/fonts/boxicons.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="assets/vendor/css/core.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="assets/css/demo.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css">    
+    <!-- Vendors CSS -->
+    <link rel="stylesheet" href="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+
+    <!-- Page CSS -->
+    <!-- Page -->
+    <link rel="stylesheet" href="assets/vendor/css/pages/page-auth.css" />
+    <!-- Helpers -->
+    <script src="assets/vendor/js/helpers.js"></script>
+
+    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+    <script src="assets/js/config.js"></script>
+  </head>
+
+  <body>
+    <!-- Content -->
+
+    <div class="container-xxl">
+      <div class="authentication-wrapper authentication-basic container-p-y">
+        <div class="authentication-inner">
+          <!-- Register Card -->
+          <div class="card">
+            <div class="card-body">
+              <!-- Logo -->
+              <div class="app-brand justify-content-center">
+                <a href="index.html" class="app-brand-link gap-2">
+                  <span class="app-brand-logo demo">
+                    <i class="fas fa-user-plus" style="font-size: 42px; color: #379584;"></i>
+                  </span>
+                </a>
+              </div>
+              <!-- /Logo -->
+              <h4 class="mb-2 text-center">Register Account</h4>
+
+              <form id="registration-form" class="mb-3" method="POST">
+                <div class="mb-3">
+                  <label for="username" class="form-label">Username</label>
+                  <div class="input-group input-group-merge">
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" required />
+                    <span class="input-group-text cursor-pointer" id="username_valid"><i class='bx bxs-error-circle text-warning'></i></span>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <div class="input-group input-group-merge">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" oninput="checker()" autofocus required />
+                    <span class="input-group-text cursor-pointer" id="email_valid_icon"><i class='bx bxs-error-circle text-warning'></i></span>
+                  </div>
+                </div>
+                <div class="form-group mb-3">
+                  <label class="form-label" for="phone">Phone Number</label>
+                  <div class="input-group">
+                    <input id="phone" type="tel" name="phone" class="form-control" required />
+                    <span class="input-group-text cursor-pointer" id="valid_phone"><i class='bx bxs-error-circle text-warning'></i></span>
+                  </div>
+                </div>
+                <div class="mb-3 form-password-toggle">
+                  <label class="form-label" for="password">Password</label>
+                  <div class="input-group input-group-merge">
+                    <input type="password" id="password" class="form-control" name="password"
+                      placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password" required
+                    />
+                    <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
+                  </div>
+                  <div id="popover-password">
+                    <p><span id="result"></span></p>
+                    <div class="progress">
+                      <div id="password-strength" class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:0%; box-shadow: none;"></div>
+                    </div>
+                    <ul class="list-unstyled fs-12 mt-2">
+                        <li class="">
+                            <span class="low-upper-case">
+                                <i class="fas fa-times-circle" aria-hidden="true"></i>
+                                &nbsp;Lowercase &amp; Uppercase
+                            </span>
+                        </li>
+                        <li class="">
+                            <span class="one-number">
+                                <i class="fas fa-times-circle" aria-hidden="true"></i>
+                                &nbsp;Number (0-9)
+                            </span> 
+                        </li>
+                        <li class="">
+                            <span class="one-special-char">
+                                <i class="fas fa-times-circle" aria-hidden="true"></i>
+                                &nbsp;Special Character (!@#$%^&*)
+                            </span>
+                        </li>
+                        <li class="">
+                            <span class="eight-character">
+                                <i class="fas fa-times-circle" aria-hidden="true"></i>
+                                &nbsp;Atleast 8 Character
+                            </span>
+                        </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="terms_conditions" name="terms" required />
+                    <label class="form-check-label" for="terms-conditions">
+                      I agree to
+                      <a href="javascript:void(0);">privacy policy & terms</a>
+                    </label>
+                  </div>
+                </div>
+                <button class="btn btn-primary d-grid w-100" type="submit">Sign up</button>
+              </form>
+
+              <p class="text-center">
+                <span>Already have an account?</span>
+                <a href="/login">
+                  <span>Sign in instead</span>
+                </a>
+              </p>
+            </div>
+          </div>
+          <!-- Register Card -->
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js"></script>
+    <script>
+      const input = document.querySelector("#phone");
+      const output = document.querySelector("#valid_phone");
+      let userInput = document.querySelector('#username');
+      let isValid = 0;
+      userInput.addEventListener("keyup", function(){
+        let userNameValue = userInput.value; // Access the value directly from userInput
+        userName(userNameValue);
+      });
+
+      function userName(userNameValue){
+        const usernameValid = document.getElementById('username_valid');
+        if(userNameValue.length > 0){
+          isValid += 1;
+          usernameValid.innerHTML = `<i class='bx bxs-check-circle text-success'></i>`;
+        } else {
+          usernameValid.innerHTML = `<i class='bx bxs-error-circle text-warning'></i>`;
+        }
+      }
+
+
+      let emailId = document.getElementById("email");
+      let icon = document.getElementById("email_valid_icon");
+      let mailRegex = /^[a-zA-Z][a-zA-Z0-9\-\_\.]+@[a-zA-Z0-9]{2,}\.[a-zA-Z0-9]{2,}$/;
+
+      function checker(){
+        icon.style.display="inline-block";
+        if(emailId.value.match(mailRegex)){
+          isValid += 1;
+          icon.innerHTML = `<i class='bx bxs-check-circle text-success'></i>`;
+        }
+        else if(emailId.value == ""){
+          isValid -= 1;
+          icon.innerHTML = `<i class='bx bxs-error-circle text-warning'></i>`;
+        }
+        else{
+          isValid -= 1;
+          icon.innerHTML = `<i class='bx bxs-x-circle text-danger'></i>`;
+        }
+      }
+      let state = false;
+      let password = document.getElementById("password");
+      let passwordStrength = document.getElementById("password-strength");
+      let lowUpperCase = document.querySelector(".low-upper-case i");
+      let number = document.querySelector(".one-number i");
+      let specialChar = document.querySelector(".one-special-char i");
+      let eightChar = document.querySelector(".eight-character i");
+
+      password.addEventListener("keyup", function(){
+        let pass = document.getElementById("password").value;
+        checkStrength(pass);
+      });
+
+      function checkStrength(password) {
+        let strength = 0;
+
+        //If password contains both lower and uppercase characters
+        if (password.match(/([a-z].*[A-Z])|([A-Z].*[a-z])/)) {
+          strength += 1;
+          lowUpperCase.classList.remove('fa-times-circle');
+          lowUpperCase.classList.remove('text-danger');
+          lowUpperCase.classList.add('fa-check');
+          lowUpperCase.classList.add('text-success');
+        } else {
+          lowUpperCase.classList.add('fa-times-circle');
+          lowUpperCase.classList.add('text-danger');
+          lowUpperCase.classList.remove('fa-check');
+          lowUpperCase.classList.remove('text-success');
+        }
+        //If it has numbers and characters
+        if (password.match(/([0-9])/)) {
+          strength += 1;
+          number.classList.remove('fa-times-circle');
+          number.classList.remove('text-danger');
+          number.classList.add('fa-check');
+          number.classList.add('text-success');
+        } else {
+          number.classList.add('fa-times-circle');
+          number.classList.add('text-danger');
+          number.classList.remove('fa-check');
+          number.classList.remove('text-success');
+        }
+        //If it has one special character
+        if (password.match(/([!,%,&,@,#,$,^,*,?,_,~])/)) {
+          strength += 1;
+          specialChar.classList.remove('fa-times-circle');
+          specialChar.classList.remove('text-danger');
+          specialChar.classList.add('fa-check');
+          specialChar.classList.add('text-success');
+        } else {
+          specialChar.classList.add('fa-times-circle');
+          specialChar.classList.add('text-danger');
+          specialChar.classList.remove('fa-check');
+          specialChar.classList.remove('text-success');
+        }
+        //If password is greater than 7
+        if (password.length > 7) {
+          strength += 1;
+          eightChar.classList.remove('fa-times-circle');
+          eightChar.classList.remove('text-danger');
+          eightChar.classList.add('fa-check');
+          eightChar.classList.add('text-success');
+        } else {
+          eightChar.classList.add('fa-times-circle');
+          eightChar.classList.add('text-danger');
+          eightChar.classList.remove('fa-check');   
+          eightChar.classList.remove('text-success');   
+        }
+
+        // If value is less than 2
+        if (strength < 2) {
+          passwordStrength.classList.remove('progress-bar-warning');
+          passwordStrength.classList.remove('progress-bar-success');
+          passwordStrength.classList.add('progress-bar-danger');
+          passwordStrength.style = 'width: 20%';
+        } else if (strength == 3) {
+          passwordStrength.classList.remove('progress-bar-success');
+          passwordStrength.classList.remove('progress-bar-danger');
+          passwordStrength.classList.add('progress-bar-warning');
+          passwordStrength.style = 'width: 60%';
+          isValid -= 1;
+        } else if (strength == 4) {
+          passwordStrength.classList.remove('progress-bar-warning');
+          passwordStrength.classList.remove('progress-bar-danger');
+          passwordStrength.classList.add('progress-bar-success');
+          passwordStrength.style = 'width: 100%';
+          isValid += 1;
+        }
+        return strength;
+      }
+
+
+      //Phone Number Intialation and Validation
+      const iti = window.intlTelInput(input, {
+        nationalMode: true,
+        initialCountry: "bd",
+        utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js" // just for formatting/placeholders etc
+      });
+
+      const handleChange = () => {
+        let text;
+        if (input.value) {
+          text = iti.isValidNumber()
+            ? "<i class='bx bxs-check-circle text-success'></i>"
+            : "<i class='bx bxs-x-circle text-danger'></i>";
+        } else {
+          text = "<i class='bx bxs-error-circle text-warning'></i>";
+        }
+        output.innerHTML = text;
+      };
+
+      // listen to "keyup", but also "change" to update when the user selects a country
+      input.addEventListener('change', handleChange);
+      input.addEventListener('keyup', handleChange);
+
+      function toggleSubmitButton() {
+        const submitButton = document.querySelector('button[type="submit"]');
+        console.log(areAllFieldsValid())
+        submitButton.disabled = !areAllFieldsValid();
+      }
+
+      document.getElementById('registration-form').addEventListener('input', toggleSubmitButton);
+
+      function areAllFieldsValid() {
+        let validFields = 0;
+        const requiredFields = document.querySelectorAll('[required]');
+        requiredFields.forEach(field => {
+          if (field.id == 'email') {
+            if (field.value.match(mailRegex)) {
+              validFields++;
+            }
+          } 
+          else if (field.id == 'password') {
+            let pass = field.value;
+            if ((checkStrength(pass) >= 4)) {
+              validFields++;
+            }
+          } 
+          else if (field.id == 'username') {
+            if (field.value.length > 0) {
+              validFields++;
+            }
+          }
+          else if (field.id == 'phone') {
+            if (iti.isValidNumber()) {
+              validFields++;
+            }
+          }
+          else if(field.id == 'terms_conditions'){
+            console.log("Valid")
+            if (field.checked) {
+              validFields++;
+            }
+          }
+          // Add more conditions for other fields as needed
+        });
+
+        // Return true if at least three fields are valid
+        console.log(validFields);
+        return validFields >= 5;
+      }
+
+      document.getElementById('registration-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        let formData = {
+          username: this.elements['username'].value,
+          email: this.elements['email'].value,
+          phone: this.elements['phone'].value,
+          password: this.elements['password'].value,
+          terms: this.elements['terms'].checked,
+          // Retrieve other form fields similarly
+        };
+        
+          fetch('https://genwebbuilder.com:3000/signupdata', {
+            method: 'POST',
+            body: JSON.stringify(formData),
+            headers: {
+              'Content-Type': 'application/json'
+            }
+          })
+          .then(response => response.json())
+          .then(data => {
+            console.log(data); // Log the response data
+            // Perform actions based on the response (e.g., redirect on successful login)
+            if (data.redirect) {
+              if(data.verify_code){
+                localStorage.setItem('verifyCode', data.verify_code);
+                localStorage.setItem('email', data.email);
+                localStorage.setItem('mobile', data.mobile);
+                localStorage.setItem('name:', data.name);
+                localStorage.setItem('password', data.password);
+                window.location.href = data.redirect;
+              }
+              
+            } else {
+              // Handle errors or display messages to the user
+            }
+          })
+          .catch(error => {
+            console.error('Error during signup:', error);
+          });
+      });
+
+    </script>
+
+
+
+    <!-- Core JS -->
+    <!-- build:js assets/vendor/js/core.js -->
+    <script src="assets/vendor/libs/jquery/jquery.js"></script>
+    <script src="assets/vendor/libs/popper/popper.js"></script>
+    <script src="assets/vendor/js/bootstrap.js"></script>
+    <script src="assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+    <script src="assets/vendor/js/menu.js"></script>
+    <!-- endbuild -->
+
+    <!-- Vendors JS -->
+
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- Page JS -->
+
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  </body>
+</html>
